@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d3b0a744-e2f7-4fd1-b3e3-d26b26df5fa5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="transaksi" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="user" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT ss.notransaksi, ss.id, ss.nama, ss.jumlahsimpan, ss.tanggal, a.nama_admin FROM transaksisimpanan AS ss, admin AS a WHERE ss.notransaksi = $P{transaksi} AND a.nama_admin = $P{user}]]>
+	</queryString>
+	<field name="notransaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlahsimpan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_admin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="389" splitType="Stretch">
+			<rectangle>
+				<reportElement x="142" y="12" width="291" height="362" uuid="cc1583ea-001b-4922-bb62-456cfd737007"/>
+			</rectangle>
+			<textField>
+				<reportElement x="295" y="314" width="100" height="20" uuid="5526d4e6-84c5-465c-b3a4-74839cf29e6e"/>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="143" width="100" height="26" uuid="675c5abe-332e-4916-8246-be2388592173"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notransaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="181" width="100" height="20" uuid="09e3f247-4467-4724-b7c5-d443cd0a2adc"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="213" width="100" height="20" uuid="1ff9bf7e-3ba5-4231-8a8c-67b2d0d15175"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="245" width="100" height="20" uuid="3ec1a701-fbb2-4535-8cf1-15d2b8ac81f1"/>
+				<textFieldExpression><![CDATA[$F{jumlahsimpan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="295" y="281" width="74" height="20" uuid="9359476b-7c23-4155-8b68-994b450313dd"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[18  Juli  2020]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="181" width="86" height="20" uuid="c5877582-3677-45f5-82ec-d6c18dc64e19"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[No Anggota        :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="245" width="86" height="20" uuid="7fce233d-4b40-453f-a6bf-7463240af41b"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jumlah Simpan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="213" width="86" height="20" uuid="87814aa7-2296-4bf7-b132-8730e57b7982"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Nama                 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="281" width="86" height="20" uuid="d7ee0b44-2251-4faa-9780-bb0f856d5ba2"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal             :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="314" width="86" height="20" uuid="3de1ca26-d07d-40a2-b6af-047b08d9884e"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Admin                :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="245" width="19" height="20" uuid="c903aaad-bd0e-4872-ab6b-bb805fdc1c99"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="158" y="26" width="275" height="117" uuid="6ba5dd4a-0fc6-4da3-a2fa-31ee769381e8"/>
+				<imageExpression><![CDATA["C:\\Users\\LENOVO-PC\\Documents\\NetBeansProjects\\KoperasiSimpanPinjam\\src\\laporan\\mini-logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

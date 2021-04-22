@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="027361bc-c1a5-4011-818f-34faf151fe51">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tglmulai" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tglselesai" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="user" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT r.id, r.nama, r.saldo, r.tanggal, a.nama_admin FROM rekening AS r, admin AS a WHERE a.nama_admin = $P{user} AND r.tanggal BETWEEN $P{tglmulai} AND $P{tglselesai}]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_admin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="146" splitType="Stretch">
+			<staticText>
+				<reportElement x="426" y="28" width="293" height="22" uuid="03c6c887-d073-43d2-9ca1-1fde0bb6b05c"/>
+				<textElement>
+					<font size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jl.Kampung Pulo Mangga Gg.Mangga 2 No.26]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="0" width="363" height="28" uuid="55f8f02f-44a2-443d-b345-37fe6ccc076c"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[KOPERASI PAGUYUBAN DAMAI LESTARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="524" y="72" width="95" height="22" uuid="4454fc48-0b2a-4c05-8727-4233fd244e95"/>
+				<textElement>
+					<font size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[087885388465]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="50" width="293" height="22" uuid="4ef11fc0-9ce9-4f70-9346-b76b7169e706"/>
+				<textElement>
+					<font size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Kel.Grogol, Kec.Limo Kota Depok Jawa Barat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="115" width="155" height="20" uuid="8cd9afe0-4238-4b91-855b-c64c13aa5e87"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[1  Juli  2020   s/d   18  Juli  2020]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="107" width="216" height="28" uuid="65981994-f282-4fb5-9685-7182d1b28e36"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Saldo Rekening]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="4" width="194" height="20" uuid="f15374cb-bde1-4dde-8367-b22482df7c48"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="194" y="4" width="195" height="20" uuid="0cb71f4e-52c6-4e67-b3db-ba86e884aef4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="389" y="4" width="207" height="20" uuid="06efbfee-2a34-4012-ad1d-3bcf3ade83c6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="596" y="4" width="206" height="20" uuid="c726f9a1-8d69-4c76-91b3-286ec5c5832b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="76" y="4" width="100" height="20" uuid="1e45f43b-c7cc-49bd-8e43-911e56ff289b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="4" width="100" height="20" uuid="5e3c6b87-6a57-436c-a0e7-d8f3fc47f65f"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="4" width="100" height="20" uuid="0ba321e8-8774-4450-97cf-b19d3c178765"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="4" width="100" height="20" uuid="47f2ed71-37de-4279-b7c0-9f9a4dff4e1c"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="51" y="17" width="100" height="20" uuid="62ff1a40-061b-4086-be05-542fd2dddcfb"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="17" width="100" height="20" uuid="defad4ef-845d-485e-a6bc-8b865224e2fc"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="17" width="100" height="20" uuid="713a3e20-e3c0-4289-9c0b-d0d5a16bde5e"/>
+				<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="652" y="17" width="100" height="20" uuid="ec8c1ef4-6412-492b-b0dd-21dcbf71c155"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="451" y="17" width="17" height="20" uuid="5b1d2f06-dd16-4091-bd02-2ecb0e89e25f"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="36" width="802" height="1" uuid="c79af043-c753-486b-92b8-31d8f5635810"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="176" splitType="Stretch">
+			<textField>
+				<reportElement x="619" y="156" width="100" height="20" uuid="2f48243c-ab3c-409d-a4d6-3a3d83989d30"/>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="618" y="76" width="63" height="20" uuid="bea088be-696f-47a3-aef8-6b803d26dd53"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Adminstrator]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="619" y="56" width="74" height="20" uuid="cbba83de-7674-46f7-a9d9-cc0486efd0a5"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[18  Juli  2020]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="584" y="56" width="35" height="20" uuid="38baea18-dca2-4478-ab03-d34f423c7190"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

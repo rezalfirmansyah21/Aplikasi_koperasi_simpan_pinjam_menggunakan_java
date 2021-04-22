@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12b863dd-faa0-4484-86ff-17d0bfef36f7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tglmulai" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tglselesai" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="user" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT j.no, j.jenis, j.maxpinjaman, j.maxangsuran, j.bunga, j.tanggal, a.nama_admin FROM jenispinjaman AS j, admin AS a WHERE a.nama_admin = $P{user} AND j.tanggal BETWEEN $P{tglmulai} AND $P{tglselesai}]]>
+	</queryString>
+	<field name="no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maxpinjaman" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maxangsuran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bunga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_admin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="144" splitType="Stretch">
+			<staticText>
+				<reportElement x="543" y="72" width="95" height="22" uuid="91fd4864-3104-4c53-baf4-f23ea5bf69a4"/>
+				<textElement>
+					<font size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[087885388465]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="0" width="363" height="28" uuid="006cda72-d49e-4329-b0f5-227631fb94fc"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[KOPERASI PAGUYUBAN DAMAI LESTARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="28" width="293" height="22" uuid="7b408543-857a-4956-a411-a544c53b49bf"/>
+				<textElement>
+					<font size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jl.Kampung Pulo Mangga Gg.Mangga 2 No.26]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="50" width="293" height="22" uuid="497339f5-918f-4603-8f01-4cf7804151b7"/>
+				<textElement>
+					<font size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Kel.Grogol, Kec.Limo Kota Depok Jawa Barat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="116" width="217" height="28" uuid="99a49f70-451f-4f30-814d-acef43048998"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Jenis Pinjaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="124" width="155" height="20" uuid="683e636a-1ea4-43ef-8110-b13b6a70be6e"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[1  Juli  2020   s/d   18  Juli  2020]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="135" y="10" width="134" height="20" uuid="5f59d750-8459-4bda-b521-71f5df034bf2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="269" y="10" width="139" height="20" uuid="ca7ac3e8-5691-4947-840b-67a10bd3acc7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="408" y="10" width="128" height="20" uuid="066db619-6a38-4482-b77a-689bf2b674e4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="536" y="10" width="131" height="20" uuid="cdfc2357-91a9-475b-b5ed-a9bfade6a2a2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="667" y="10" width="135" height="20" uuid="3a46b122-5979-4ac7-bd5c-35abaf66ba04"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="10" width="135" height="20" uuid="c976f017-1438-4620-b84b-38bf32d0009b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="48" y="10" width="68" height="20" uuid="c0b28c5b-163f-4404-9152-dde345c21934"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="10" width="100" height="20" uuid="b6e7085a-56b9-4775-ac19-51e05a045566"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pinjaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="10" width="100" height="20" uuid="4b069dc3-731e-435b-931f-177213bbe89e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Max Pinjaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="10" width="87" height="20" uuid="8d72f08f-c98c-472c-aa71-76b5f9c2b759"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Max Angsuran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="10" width="86" height="20" uuid="cbf2619b-597a-4c29-be1a-d745dac56d72"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[bunga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="720" y="10" width="82" height="20" uuid="8ebcffe9-899b-49b8-8487-a1fc7f2a2c6d"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="35" y="15" width="100" height="20" uuid="e190a575-1186-4ee9-b731-c509c6c97841"/>
+				<textFieldExpression><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="15" width="100" height="20" uuid="c2d97e23-64ec-4b1d-bade-cb8fb606b53b"/>
+				<textFieldExpression><![CDATA[$F{jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="15" width="89" height="20" uuid="4c5f26ad-c11e-46d0-adb8-767ffd0fe8cf"/>
+				<textFieldExpression><![CDATA[$F{maxpinjaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="15" width="21" height="20" uuid="f4d76ca9-48ad-4142-a7b4-ccb6d048e80e"/>
+				<textFieldExpression><![CDATA[$F{maxangsuran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="15" width="17" height="20" uuid="e6bb41e5-09b1-41b4-b9c9-7911e5e3c386"/>
+				<textFieldExpression><![CDATA[$F{bunga}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="702" y="15" width="100" height="20" uuid="f8dbf5cd-db53-4cf9-978b-d6affa12fc5f"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="35" width="802" height="1" uuid="b59b825a-3005-48c7-a855-2c893d4a7068"/>
+			</line>
+			<staticText>
+				<reportElement x="302" y="15" width="17" height="20" uuid="a845a8c4-9960-4faa-88d4-e38eeb7161ff"/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="15" width="28" height="20" uuid="7b59f12a-fa0b-4660-a30f-1869e78e1779"/>
+				<text><![CDATA[bulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="17" width="16" height="20" uuid="fb40eb7e-fa30-4021-843b-d9e745fa5603"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="202" splitType="Stretch">
+			<textField>
+				<reportElement x="638" y="182" width="100" height="20" uuid="a5316b63-e29e-4bf4-b324-aeb4b6454ae7"/>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="603" y="83" width="35" height="20" uuid="a82fab61-8570-4b77-bdd6-f49e709168f7"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="637" y="103" width="63" height="20" uuid="77fe2ac1-197a-4328-9385-e61f4c4fa6b4"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Adminstrator]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="83" width="74" height="20" uuid="046b9163-5fc7-4136-bea9-3f24e4745395"/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[18  Juli  2020]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
